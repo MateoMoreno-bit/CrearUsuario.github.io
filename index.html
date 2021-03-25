@@ -21,9 +21,9 @@
         <section class="login__container">
             <form class="login__container--form" id="main_form">
                 <h2 tabindex="0">Crear usuario</h2>
-                <input id="Nombre_User" name="Nombre_User" aria-label="Nombre" class="input" type="text" placeholder="Nombre completo..." >
-                <input id="Dir_User" name="Dir_User"  aria-label="Direccion" class="input" type="text" placeholder="Dirección..." >
-                <input id="Tel_User" name="Tel_User"  aria-label="Telefono" class="input" type="text" placeholder="Teléfono..." >
+                <input id="Nombre_User" name="Nombre_User" aria-label="Nombre" class="input" type="text" placeholder="Nombre completo..." required>
+                <input id="Dir_User" name="Dir_User"  aria-label="Direccion" class="input" type="text" placeholder="Dirección..." required>
+                <input id="Tel_User" name="Tel_User"  aria-label="Telefono" class="input" type="text" placeholder="Teléfono..." required>
 
                 <div class="container_text--details">
                     <details class="container_text--details-summary1">
@@ -34,10 +34,9 @@
                     </details>
                 </div>
 
-                <button class="button">Crear</button>
+                <button id="btn" class="button">Crear</button>
                 <input class="submit_button" onclick="processData()" value="Crear" type="submit">
             </form>
-            
         </section>
     </section>
     <footer class="footer">
@@ -47,3 +46,10 @@
     </footer>    
 </body>
 </html>
+
+
+<!-- almacene en el storage del explorador  -->
+<!-- primer lunes de semana santa -->
+<!-- mostrar en una grilla en la pantalla -->
+<!-- crear dos botones uno que se llame crear cliente, diga ver cliente -->
+<!-- o despues de semana santa -->

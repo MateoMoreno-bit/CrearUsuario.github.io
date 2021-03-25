@@ -23,8 +23,6 @@ body {
 
 .login {
   background: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,16 +39,12 @@ body {
   padding: 60px 68px 40px;
   min-height: 700px;
   width: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
 }
 
 .login__container--form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
 }
@@ -97,7 +91,6 @@ summary{
   cursor: pointer;
   padding: 1em;
   outline: none;
-  
 }
 
 details[open] summary ~ *{
@@ -119,7 +112,6 @@ details[open] summary ~ *{
 }
 
 .button {
-  display: none;
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
@@ -135,6 +127,7 @@ details[open] summary ~ *{
 }
 
 .submit_button{
+  display: none;
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;

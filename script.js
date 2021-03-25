@@ -1,32 +1,52 @@
-function obtenerDatosCliente() {
-    let idCliente = Math.floor(Math.random() * 999999);
-    let nombreCliente = document.getElementById("Nombre_User").value;
-    let DirCliente = document.getElementById("Dir_User").value;
-    let TelCliente = document.getElementById("Tel_User").value;
-    const fechaCreacion = new Date();
+document.addEventListener("DOMContentLoaded",function(event){
 
-    var arrayUsuario = [idCliente,nombreCliente,DirCliente,TelCliente,fechaCreacion];
+    function constructorUsuario(nombreCliente,DirCliente,TelCliente) {
+        this.idCliente = Math.floor(Math.random() * 999999);
+        this.nombreCliente = nombreCliente;
+        this.DirCliente = DirCliente;
+        this.TelCliente = TelCliente;
+        this.fechaCreacion = new Date();
+    }
 
-    return arrayUsuario;
-}
 
-function obtenerDatosContacto() {
-    let idContacto = Math.floor(Math.random() * 999999);
-    let nombreCont = document.getElementById("Nombre_Cont").value;
-    let DirCont = document.getElementById("Dir_Cont").value;
-    let Telcont = document.getElementById("Tel_Cont").value;
+    function obtenerDatosCliente() {
+        let nombreCliente = document.getElementById("Nombre_User").value;
+        let DirCliente = document.getElementById("Dir_User").value;
+        let TelCliente = document.getElementById("Tel_User").value;
 
-    var arrayContacto = [idContacto,nombreCont,DirCont,Telcont];
+        /* var arrayUsuario = [idCliente,nombreCliente,DirCliente,TelCliente,fechaCreacion]; */
+        var NewUsuario = new constructorUsuario(nombreCliente,DirCliente,TelCliente)
 
-    return arrayContacto;
-}
+        return NewUsuario;
+    }
 
-function processData() {
-    cliente = obtenerDatosCliente();
-    contacto = obtenerDatosContacto();
+    /* function obtenerDatosContacto() {
+        let idContacto = Math.floor(Math.random() * 999999);
+        let nombreCont = document.getElementById("Nombre_Cont").value;
+        let DirCont = document.getElementById("Dir_Cont").value;
+        let Telcont = document.getElementById("Tel_Cont").value;
 
-    alert(cliente.join('\n'));     
-    alert(contacto.join('\n'));
-};
+        var arrayContacto = [idContacto,nombreCont,DirCont,Telcont];
 
-/* fin */
+        return arrayContacto;
+    } */
+
+    function MostrarCliente() {
+        cliente = obtenerDatosCliente();
+        /* contacto = obtenerDatosContacto(); */
+
+        console.table(cliente)
+        /* alert(contacto.join('\n')); */
+    };
+
+    var btn = document.getElementById("btn");
+    if (btn){
+        btn.addEventListener("click", MostrarCliente());
+    }
+
+});
+
+
+
+
+
