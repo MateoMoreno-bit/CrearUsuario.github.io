@@ -112,6 +112,7 @@ details[open] summary ~ *{
 }
 
 .button {
+  
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
@@ -123,7 +124,7 @@ details[open] summary ~ *{
   font-family: 'Muli', sans-serif;
   height: 50px;
   letter-spacing: 1px;
-  margin: 40px 0px;
+  margin: 10px 0px;
 }
 
 .submit_button{
